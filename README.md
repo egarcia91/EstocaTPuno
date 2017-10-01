@@ -4,7 +4,7 @@ Inicia el TP uno de estoca<br />
 Miembros:<br />
 
 Jeremias Zec [padron algo]<br />
-Nicolas Russo [padron algo]<br />
+Nicolas Russo [93211]<br />
 Ezequiel Garcias [93191]<br />
 
 Vamos a usar Python con Scipy.<br />
