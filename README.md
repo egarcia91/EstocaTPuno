@@ -6,6 +6,7 @@ Miembros:<br />
 Jeremias Zec [padron algo]<br />
 Nicolas Russo [93211]<br />
 Ezequiel Garcias [93191]<br />
+Marcelo Sanchez [padron algo]<br />
 
 Vamos a usar Python con Scipy.<br />
 
