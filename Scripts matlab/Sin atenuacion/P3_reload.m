@@ -4,7 +4,6 @@ SNRdB=(-5):30;
 SNR=10.^(SNRdB/10);
 k=1;
 A=10;
-H=0.9;
 
 for n=1:4:25
   Pe_digital(k,:)=(1/2)*(1-(1-(2*qfunc(sqrt(SNR)))).^n);
@@ -38,7 +37,7 @@ for m=1:4:25
  for SNRprueba=-5:30
   
   SNRp=10^(SNRprueba/10);
-  sigma=H*A/(sqrt(SNRp));
+  sigma=A/(sqrt(SNRp));
   G=sqrt(SNRp/(SNRp+1));
   Sum=1;
 
@@ -56,7 +55,7 @@ for m=1:4:25
   for i=2:m
     Gprod=Gprod*G;
   end
-  SNRn=((Gprod^2)*(A^2)*(H^2))/VarRuido;
+  SNRn=((Gprod^2)*A^2)/VarRuido;
  
   PeAnalogTeorico(cont,k)=qfunc(sqrt(SNRn)); 
   k=k+1;

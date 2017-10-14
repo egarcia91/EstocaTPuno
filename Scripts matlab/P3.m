@@ -5,6 +5,7 @@ SNRdB=(-5):30;
 SNR=10.^(SNRdB/10);
 k=1;
 A=10;
+H=0.9; 
 
 %  Probabilidad de error repetidor digital - teórico %
 
@@ -15,17 +16,17 @@ end
 
 plot(SNRdB,Pe_digital(1,:),'ob');
 hold on;
-plot(SNRdB,Pe_digital(2,:),'r');
+plot(SNRdB,Pe_digital(2,:),'r--');
 hold on;
-plot(SNRdB,Pe_digital(3,:),'g');
+plot(SNRdB,Pe_digital(3,:),'g--');
 hold on;
-plot(SNRdB,Pe_digital(4,:),'m');
+plot(SNRdB,Pe_digital(4,:),'m--');
 hold on;
-plot(SNRdB,Pe_digital(5,:),'c');
+plot(SNRdB,Pe_digital(5,:),'c--');
 hold on;
-plot(SNRdB,Pe_digital(6,:),'k');
+plot(SNRdB,Pe_digital(6,:),'k--');
 hold on;
-plot(SNRdB,Pe_digital(7,:),'b');
+plot(SNRdB,Pe_digital(7,:),'b--');
 
 
  
@@ -39,7 +40,7 @@ for m=1:4:25
  for SNRprueba=-5:30
   
   SNRp=10^(SNRprueba/10);
-  sigma=A/(sqrt(SNRp));
+  sigma=H*A/(sqrt(SNRp));
   G=sqrt(SNRp/(SNRp+1));
   Sum=1;
 
@@ -57,7 +58,7 @@ for m=1:4:25
   for i=2:m
     Gprod=Gprod*G;
   end
-  SNRn=((Gprod^2)*A^2)/VarRuido;
+  SNRn=((Gprod^2)*(A^2)*(H^2))/VarRuido;
  
   PeAnalogTeorico(cont,k)=qfunc(sqrt(SNRn)); 
   k=k+1;

@@ -4,7 +4,7 @@ clear all; close all; clc;
 
 SNRdB_vec=-5:30;
 
-H=0.9
+
 A=10;
 cont=1;
 for m=1:4:25
@@ -13,7 +13,7 @@ for m=1:4:25
  for SNRprueba=-5:30
   
   SNRp=10^(SNRprueba/10);
-  sigma=H*A/(sqrt(SNRp));
+  sigma=A/(sqrt(SNRp));
   G=sqrt(SNRp/(SNRp+1));
   Sum=1;
 
@@ -31,7 +31,7 @@ for m=1:4:25
   for i=2:m
     Gprod=Gprod*G;
   end
-  SNRn=((Gprod^2)*(A^2)*(H^2))/VarRuido;
+  SNRn=((Gprod^2)*A^2)/VarRuido;
  
   PeAnalogTeorico(cont,k)=qfunc(sqrt(SNRn)); 
   k=k+1;
