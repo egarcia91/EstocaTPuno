@@ -3,11 +3,13 @@ Inicia el TP uno de estoca<br />
 
 Miembros:<br />
 
-Jeremias Zec [padron algo]<br />
+Jeremias Zec [92444]<br />
 Nicolas Russo [93211]<br />
 Ezequiel Garcias [93191]<br />
-Marcelo Sanchez [padron algo]<br />
+Marcelo Sanchez [87685]<br />
 
-Vamos a usar Python con Scipy.<br />
+Finalmente trabajamos en Matlab.<br />
 
-https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html
+Overleaf para tener el LaTeX.<br />
+
+https://www.overleaf.com/11594852wjxvnrxgfrfk
