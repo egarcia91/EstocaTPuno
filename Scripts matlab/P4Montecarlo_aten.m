@@ -1,5 +1,7 @@
 clear all; close all; clc;
 
+%pkg load communications; %Para que funcione en Octave
+
 % Montecarlo A=10%
 
 % Repetidor Digital %
@@ -67,8 +69,9 @@ semilogy(5:25,PeDigTeorica,'k');
 ylim([10^-6  1]);
 xlabel('SNR');
 ylabel('Probabilidad de error');
-legend('Curva simulada','Curva teórica','location','NorthEastOutside');
-title('Repetidor Digital - Monte Carlo vs. Probabilidad Teórica');
+legend('Curva simulada','Curva teorica','location','NorthEastOutside');
+title('Repetidor Digital - Monte Carlo vs. Probabilidad Teorica');
+%print -djpg comparacionDigital.jpg; %Octave
 grid minor;
   
   
@@ -156,7 +159,8 @@ k=1;
 
  xlabel('SNR');
  ylabel('Probabilidad de error');
- legend('Curva simulada','Curva teórica','location','NorthEastOutside');
- title('Repetidor Analógico - Monte Carlo vs. Probabilidad Teórica');
+ legend('Curva simulada','Curva teorica','location','NorthEastOutside');
+ title('Repetidor Analogico - Monte Carlo vs. Probabilidad Teorica');
+ %print -djpg comparacionAnalogica.jpg; %Octave
  grid minor;
  
